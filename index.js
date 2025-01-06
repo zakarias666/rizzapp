@@ -19,7 +19,7 @@ async function handleFileUpload(event) {
 
         try {
             startLoading();
-            const response = await fetch('https://hetzner-dev-ws.ipwsystems.dk/upload', {
+            const response = await fetch('https://rizzapp-server.onrender.com/upload', {
                 method: 'POST',
                 body: formData,
             });
@@ -107,7 +107,7 @@ tokenInput.addEventListener('keypress', (event) => {
 });
 
 function getUsesLeft() {
-    fetch('https://hetzner-dev-ws.ipwsystems.dk/uses', {
+    fetch('https://rizzapp-server.onrender.com/uses', {
         method: 'POST',
         body: JSON.stringify({ token: localStorage.getItem('token') }),
         headers: {
