@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loader-container">
+        <div class="loader"></div>
+    </div>
+    <div id="token-input-container">
+        <div id="close-btn">✖</div>
+        <div id="token-inner-container">
+            Current token:
+            <span id="current-token">None</span>
+            <br>
+            <input type="text" id="token-input" placeholder="Enter Token" maxlength="6">
+        </div>
+    </div>
+    <div id="main-frame">
+        <div id="header">
+            <img src="logo.png" id="header-logo">
+            <div id="token-btn">
+                <img src="lock.png" id="btn-lock">
+            </div>
+            <div id="uses-left">🪙 0</div>
+        </div>
+        <div id="upload-container" onclick="if (!isTokenMenuOpen) document.getElementById('file-input').click()">
+            <p>Upload Image</p>
+            <img src="camera.png" id="camera-icon">
+            <input type="file" id="file-input" accept="image/*" onchange="handleFileUpload(event)">
+        </div>
+        <div id="output">
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
