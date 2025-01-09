@@ -19,7 +19,7 @@ async function handleFileUpload(event) {
 
         try {
             startLoading();
-            const response = await fetch('http://zakarias.dev.ipw.dk:5500/upload', {
+            const response = await fetch('https://zakarias.dev.ipw.dk:5500/upload', {
                 method: 'POST',
                 body: formData,
             });
@@ -108,7 +108,7 @@ tokenInput.addEventListener('keypress', (event) => {
 });
 
 function getUsesLeft() {
-    fetch('http://zakarias.dev.ipw.dk:5500/uses', {
+    fetch('https://zakarias.dev.ipw.dk:5500/uses', {
         method: 'POST',
         body: JSON.stringify({ token: localStorage.getItem('token') }),
         headers: {
