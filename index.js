@@ -19,12 +19,13 @@ async function handleFileUpload(event) {
 
         try {
             startLoading();
-            const response = await fetch('https://rizzapp-server.onrender.com/upload', {
+            const response = await fetch('http://zakarias.dev.ipw.dk:5500/upload', {
                 method: 'POST',
                 body: formData,
             });
 
             if (response.status === 401) {
+                stopLoading();
                 const output = document.getElementById('output');
                 output.innerHTML = `<p>Invalid token</p>`;
                 return;
@@ -107,7 +108,7 @@ tokenInput.addEventListener('keypress', (event) => {
 });
 
 function getUsesLeft() {
-    fetch('https://rizzapp-server.onrender.com/uses', {
+    fetch('http://zakarias.dev.ipw.dk:5500/uses', {
         method: 'POST',
         body: JSON.stringify({ token: localStorage.getItem('token') }),
         headers: {
