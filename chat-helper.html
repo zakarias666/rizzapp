@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RIZZ</title>
+    <title>RIZZ | Image to response</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,22 +16,23 @@
             Current token:
             <span id="current-token">None</span>
             <br>
-            <input type="text"  placeholder="Enter Token" maxlength="6">
+            <input type="text" id="token-input" placeholder="Enter Token" maxlength="6">
         </div>
     </div>
     <div id="main-frame">
         <div id="header">
+            <img src="logo.png" id="header-logo">
+            <a href="/" id="back-btn">
+                ↩
+            </a>
             <div id="uses-left">🪙 0</div>
         </div>
-        <div id="main-menu">
-            <img src="logo.png" id="menu-logo">
-            <div id="main-menu-input-token-container">
-                <input type="text" id="token-input" class="text-input" placeholder="Enter Token" maxlength="6">
-                <input type="submit" id="token-submit" value="🡆">
-            </div>
-            <a class="menu-btn" href="chat-helper.html">AI chat assist</a>
-            <a class="menu-btn" href="chat-practice.html">RIZZ Practice</a>
-            
+        <div id="upload-container" onclick="if (!isTokenMenuOpen) document.getElementById('file-input').click()">
+            <p>Upload Image</p>
+            <img src="camera.png" id="camera-icon">
+            <input type="file" id="file-input" accept="image/*" onchange="handleFileUpload(event)">
+        </div>
+        <div id="output">
         </div>
     </div>
 </body>

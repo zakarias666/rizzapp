@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIZZ | Chat Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loader-container">
+        <div class="loader"></div>
+    </div>
+    <div id="rating-container">
+        <div id="rating-counter">
+            0
+        </div>
+        <div id="rating-explanation">
+
+        </div>
+    </div>
+    <div id="token-input-container">
+        <div id="close-btn">✖</div>
+        <div id="token-inner-container">
+            Current token:
+            <span id="current-token">None</span>
+            <br>
+            <input type="text" id="token-input" placeholder="Enter Token" maxlength="6">
+        </div>
+    </div>
+    <div id="main-frame">
+        <div id="header">
+            <img src="logo.png" id="header-logo">
+            <a href="/" id="back-btn">
+                ↩
+            </a>
+            <div id="uses-left">🪙 0</div>
+        </div>
+        <div id="practice-chat-container">
+            <div id="choose-language-container">
+                Choose a language
+                <div id="outer-language-container">
+                    <div class="language-container" onclick="startPractice('da')"><img src="DK.jpg" class="language-img"></div>
+                    <div class="language-container" onclick="startPractice('en')"><img src="GB.jpg" class="language-img"></div>
+                </div>
+            </div>
+        </div>
+        <div id="practice-chat-input-container">
+            <input type="text" id="practice-chat-input" placeholder="Choose a language...">
+            <input type="submit" id="practice-chat-submit" value="🡆">
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
